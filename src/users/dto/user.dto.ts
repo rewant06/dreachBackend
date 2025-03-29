@@ -13,6 +13,7 @@ export class CreateUserDto {
 
     @IsEmail({}, {message: 'Invalid email'})
     email: string;
+    
     role: 'DOCTOR' | 'PATIENT' | 'ADMIN' | 'HOSPITAL';
 }
 

@@ -12,7 +12,7 @@ export class UsersService {
         { id: 4, name: 'Bob Brown', email:'bob@dreach.in', role: 'HOSPITAL' }
     ];
 
-    findAll(role?: 'Doctor' | 'Patient' | 'Admin' | 'Hospital') {
+    findAll(role?: 'DOCTOR' | 'PATIENT' | 'ADMIN' | 'HOSPITAL') {
         if (role) {
           const rolesArray = this.users.filter(user => user.role === role)
           if(rolesArray.length === 0) throw new NotFoundException('User Access Not Found')
